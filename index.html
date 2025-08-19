@@ -20,15 +20,15 @@
             background-color: #f8fafc;
             color: #1e293b;
         }
-        .service-card, .faq-item, .review-card { 
+        .service-card, .faq-item, .review-card, .review-screenshot-card { 
             background-color: #ffffff;
             border: 1px solid #e2e8f0;
             transition: all 0.3s ease; 
         }
-        .service-card:hover, .review-card:hover { 
+        .service-card:hover, .review-card:hover, .review-screenshot-card:hover { 
             border-color: #cbd5e1;
             transform: translateY(-5px); 
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         }
         .ai-tool-card, .calculator-card { 
             background-color: #f1f5f9;
@@ -82,7 +82,7 @@
             </div>
         </header>
 
-        <!-- НОВЫЙ БЛОК: Калькулятор стоимости -->
+        <!-- Калькулятор стоимости -->
         <section id="calculator" class="py-16">
             <div class="calculator-card rounded-lg p-8 text-left">
                 <h2 class="text-3xl font-bold mb-6 text-center section-title">Рассчитайте стоимость онлайн</h2>
@@ -117,7 +117,7 @@
             </div>
         </section>
 
-        <!-- 2. Обо мне -->
+        <!-- Обо мне -->
         <section id="about" class="py-16 text-left">
             <h2 class="text-3xl font-bold mb-8 text-center section-title">Обо мне</h2>
             <div class="bg-white p-8 rounded-lg border border-slate-200">
@@ -156,7 +156,7 @@
             </div>
         </section>
         
-        <!-- 3. Услуги -->
+        <!-- Услуги -->
         <section id="services" class="py-16">
             <h2 class="text-3xl font-bold mb-8 section-title">Мои услуги</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-left">
@@ -193,67 +193,22 @@
             </div>
         </section>
         
-        <!-- 4. Почему выбирают меня -->
-        <section id="why-me" class="py-16">
-            <h2 class="text-3xl font-bold mb-12 section-title">Почему выбирают меня?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                <div class="flex items-start space-x-4 p-4">
-                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"><svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg></div>
-                    <div><h3 class="text-lg font-semibold">Личное выполнение</h3><p class="text-slate-500">Все работы пишу лично я, без привлечения сторонних авторов и компаний.</p></div>
-                </div>
-                <div class="flex items-start space-x-4 p-4">
-                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"><svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg></div>
-                    <div><h3 class="text-lg font-semibold">Высокая оригинальность</h3><p class="text-slate-500">Гарантирую уникальность работ от 90%. Проверка через все системы антиплагиата.</p></div>
-                </div>
-                <div class="flex items-start space-x-4 p-4">
-                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"><svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg></div>
-                    <div><h3 class="text-lg font-semibold">Опыт и квалификация</h3><p class="text-slate-500">Многолетний опыт в научной деятельности и написании академических работ.</p></div>
-                </div>
-                 <div class="flex items-start space-x-4 p-4">
-                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"><svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg></div>
-                    <div><h3 class="text-lg font-semibold">Соблюдение сроков</h3><p class="text-slate-500">Работа будет готова вовремя, даже при сжатых сроках.</p></div>
-                </div>
-                 <div class="flex items-start space-x-4 p-4">
-                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"><svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg></div>
-                    <div><h3 class="text-lg font-semibold">Бесплатные доработки</h3><p class="text-slate-500">Вношу правки и корректировки бесплатно до полного соответствия требованиям.</p></div>
-                </div>
-                 <div class="flex items-start space-x-4 p-4">
-                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"><svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg></div>
-                    <div><h3 class="text-lg font-semibold">Конфиденциальность</h3><p class="text-slate-500">Ваши данные и факт заказа работы строго конфиденциальны.</p></div>
-                </div>
+        <!-- НОВЫЙ БЛОК: Реальные отзывы -->
+        <section id="screenshot-reviews" class="py-16">
+            <h2 class="text-3xl font-bold mb-12 section-title">Что говорят мои клиенты</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Замените src на ссылки на ваши изображения на GitHub -->
+                <div class="review-screenshot-card rounded-lg p-2"><img src="https://raw.githubusercontent.com/SousR0ux/student-site/main/images/photo_2025-08-19_13-03-29.jpg" alt="Отзыв клиента 1" class="rounded-md w-full"></div>
+                <div class="review-screenshot-card rounded-lg p-2"><img src="https://raw.githubusercontent.com/SousR0ux/student-site/main/images/photo_2025-08-19_13-03-39.jpg" alt="Отзыв клиента 2" class="rounded-md w-full"></div>
+                <div class="review-screenshot-card rounded-lg p-2"><img src="https://raw.githubusercontent.com/SousR0ux/student-site/main/images/photo_2025-08-19_13-03-42.jpg" alt="Отзыв клиента 3" class="rounded-md w-full"></div>
+                <div class="review-screenshot-card rounded-lg p-2"><img src="https://raw.githubusercontent.com/SousR0ux/student-site/main/images/photo_2025-08-19_13-03-48.jpg" alt="Отзыв клиента 4" class="rounded-md w-full"></div>
+                <div class="review-screenshot-card rounded-lg p-2"><img src="https://raw.githubusercontent.com/SousR0ux/student-site/main/images/photo_2025-08-19_13-03-56.jpg" alt="Отзыв клиента 5" class="rounded-md w-full"></div>
             </div>
         </section>
 
-        <!-- 5. AI-Помощник -->
-        <section id="ai-tools" class="py-16">
-            <h2 class="text-3xl font-bold mb-8 section-title">AI-Помощник</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div class="ai-tool-card rounded-lg p-6">
-                    <h3 class="text-2xl font-bold mb-4">1. Генератор тем</h3>
-                    <p class="text-slate-600 mb-4">Введите ваш предмет, и AI предложит несколько идей для исследования.</p>
-                    <input id="subjectInput" type="text" placeholder="Например, 'Маркетинг'" class="w-full bg-white border border-slate-300 rounded-md px-4 py-2 mb-4 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                    <button id="generateTopicsBtn" class="w-full bg-yellow-400 text-slate-900 font-bold py-2 px-4 rounded-md hover:bg-yellow-500 transition duration-300 flex items-center justify-center">
-                        <span class="btn-text">✨ Сгенерировать темы</span>
-                        <span class="loader hidden"></span>
-                    </button>
-                    <div id="topicsResult" class="mt-4 p-4 bg-slate-50 text-slate-700 rounded-md whitespace-pre-wrap hidden"></div>
-                </div>
-                <div class="ai-tool-card rounded-lg p-6">
-                    <h3 class="text-2xl font-bold mb-4">2. Составитель плана</h3>
-                    <p class="text-slate-600 mb-4">Введите тему вашей работы, чтобы получить структурированный план.</p>
-                    <input id="topicInput" type="text" placeholder="Например, 'Влияние соцсетей на молодежь'" class="w-full bg-white border border-slate-300 rounded-md px-4 py-2 mb-4 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                    <button id="generatePlanBtn" class="w-full bg-yellow-400 text-slate-900 font-bold py-2 px-4 rounded-md hover:bg-yellow-500 transition duration-300 flex items-center justify-center">
-                         <span class="btn-text">✨ Составить план</span>
-                         <span class="loader hidden"></span>
-                    </button>
-                    <div id="planResult" class="mt-4 p-4 bg-slate-50 text-slate-700 rounded-md whitespace-pre-wrap hidden"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. Отзывы -->
+        <!-- Старый блок с текстовыми отзывами (можно оставить или удалить) -->
         <section id="reviews" class="py-16">
-            <h2 class="text-3xl font-bold mb-8 section-title">Отзывы клиентов</h2>
+            <h2 class="text-3xl font-bold mb-8 section-title">Примеры отзывов</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="review-card p-6 rounded-lg text-left">
                     <div class="flex items-center mb-4"><div class="w-12 h-12 bg-yellow-400/20 text-yellow-500 rounded-full flex items-center justify-center font-bold text-xl">А</div><div class="ml-4"><h3 class="font-bold">Анна Васенко</h3><p class="text-sm text-slate-500">Магистр экономики, МГУ</p></div></div>
@@ -270,7 +225,7 @@
             </div>
         </section>
 
-        <!-- 7. FAQ -->
+        <!-- FAQ -->
         <section id="faq" class="py-16 text-left">
             <h2 class="text-3xl font-bold mb-8 text-center section-title">Частые вопросы</h2>
             <div class="space-y-4 max-w-3xl mx-auto">
@@ -289,7 +244,7 @@
             </div>
         </section>
 
-        <!-- 8. Контакты -->
+        <!-- Контакты -->
         <footer id="contact" class="py-16 bg-slate-100 rounded-lg">
             <h2 class="text-3xl font-bold mb-4">Готовы начать?</h2>
             <p class="text-slate-600 mb-8 max-w-2xl mx-auto">Отправьте мне детали вашей работы, и я бесплатно рассчитаю точную стоимость и сроки выполнения в течение нескольких часов.</p>
@@ -310,7 +265,7 @@
     </div>
 
     <script>
-        // --- НОВЫЙ СКРИПТ ДЛЯ КАЛЬКУЛЯТОРА ---
+        // --- СКРИПТ ДЛЯ КАЛЬКУЛЯТОРА ---
         const workTypeSelect = document.getElementById('workType');
         const pageCountInput = document.getElementById('pageCount');
         const totalPriceDisplay = document.getElementById('totalPrice');
