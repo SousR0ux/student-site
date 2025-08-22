@@ -95,7 +95,7 @@
                                 <option value="170">Курсовая работа</option>
                                 <option value="460">Дипломная работа</option>
                                 <option value="120">Реферат</option>
-                                <option value="350">Научная статья</option>
+                                <option value="140">Научная статья</option>
                                 <option value="140">Курсовой проект</option>
                                 <option value="850">Диссертация</option>
                             </select>
@@ -193,10 +193,9 @@
             </div>
         </section>
         
-        <!-- НОВЫЙ БЛОК: Реальные отзывы -->
+        <!-- Реальные отзывы -->
         <section id="screenshot-reviews" class="py-16">
             <h2 class="text-3xl font-bold mb-12 section-title">Что говорят мои клиенты</h2>
-            <!-- ИЗМЕНЕНИЕ ЗДЕСЬ: Убрал lg:grid-cols-3, чтобы на больших экранах было 2 колонки -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div class="review-screenshot-card rounded-lg p-2"><img src="https://raw.githubusercontent.com/SousR0ux/student-site/main/images/photo_2025-08-19_13-03-29.jpg" alt="Отзыв клиента 1" class="rounded-md w-full"></div>
                 <div class="review-screenshot-card rounded-lg p-2"><img src="https://raw.githubusercontent.com/SousR0ux/student-site/main/images/photo_2025-08-19_13-03-39.jpg" alt="Отзыв клиента 2" class="rounded-md w-full"></div>
@@ -206,21 +205,29 @@
             </div>
         </section>
 
-        <!-- Старый блок с текстовыми отзывами (можно оставить или удалить) -->
-        <section id="reviews" class="py-16">
-            <h2 class="text-3xl font-bold mb-8 section-title">Примеры отзывов</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="review-card p-6 rounded-lg text-left">
-                    <div class="flex items-center mb-4"><div class="w-12 h-12 bg-yellow-400/20 text-yellow-500 rounded-full flex items-center justify-center font-bold text-xl">А</div><div class="ml-4"><h3 class="font-bold">Анна Васенко</h3><p class="text-sm text-slate-500">Магистр экономики, МГУ</p></div></div>
-                    <p class="text-slate-600 italic">"Спасибо за отличную дипломную работу! Все требования учтены, научный руководитель доволен. Защита прошла успешно!"</p>
+        <!-- ВОССТАНОВЛЕННЫЙ БЛОК: AI-Помощник -->
+        <section id="ai-tools" class="py-16">
+            <h2 class="text-3xl font-bold mb-8 section-title">AI-Помощник</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="ai-tool-card rounded-lg p-6">
+                    <h3 class="text-2xl font-bold mb-4">1. Генератор тем</h3>
+                    <p class="text-slate-600 mb-4">Введите ваш предмет, и AI предложит несколько идей для исследования.</p>
+                    <input id="subjectInput" type="text" placeholder="Например, 'Маркетинг'" class="w-full bg-white border border-slate-300 rounded-md px-4 py-2 mb-4 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    <button id="generateTopicsBtn" class="w-full bg-yellow-400 text-slate-900 font-bold py-2 px-4 rounded-md hover:bg-yellow-500 transition duration-300 flex items-center justify-center">
+                        <span class="btn-text">✨ Сгенерировать темы</span>
+                        <span class="loader hidden"></span>
+                    </button>
+                    <div id="topicsResult" class="mt-4 p-4 bg-slate-50 text-slate-700 rounded-md whitespace-pre-wrap hidden"></div>
                 </div>
-                 <div class="review-card p-6 rounded-lg text-left">
-                    <div class="flex items-center mb-4"><div class="w-12 h-12 bg-yellow-400/20 text-yellow-500 rounded-full flex items-center justify-center font-bold text-xl">И</div><div class="ml-4"><h3 class="font-bold">Иван Филимонов</h3><p class="text-sm text-slate-500">Кандидат наук, СПбГУ</p></div></div>
-                    <p class="text-slate-600 italic">"Помогли с написанием диссертации. Профессиональный подход, глубокий анализ литературы и качественные исследования."</p>
-                </div>
-                 <div class="review-card p-6 rounded-lg text-left">
-                    <div class="flex items-center mb-4"><div class="w-12 h-12 bg-yellow-400/20 text-yellow-500 rounded-full flex items-center justify-center font-bold text-xl">Е</div><div class="ml-4"><h3 class="font-bold">Елена Протасова</h3><p class="text-sm text-slate-500">Студентка, ВШЭ</p></div></div>
-                    <p class="text-slate-600 italic">"Заказывала курсовую по социологии. Работа выполнена раньше срока, оригинальность 95%. Рекомендую!"</p>
+                <div class="ai-tool-card rounded-lg p-6">
+                    <h3 class="text-2xl font-bold mb-4">2. Составитель плана</h3>
+                    <p class="text-slate-600 mb-4">Введите тему вашей работы, чтобы получить структурированный план.</p>
+                    <input id="topicInput" type="text" placeholder="Например, 'Влияние соцсетей на молодежь'" class="w-full bg-white border border-slate-300 rounded-md px-4 py-2 mb-4 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    <button id="generatePlanBtn" class="w-full bg-yellow-400 text-slate-900 font-bold py-2 px-4 rounded-md hover:bg-yellow-500 transition duration-300 flex items-center justify-center">
+                         <span class="btn-text">✨ Составить план</span>
+                         <span class="loader hidden"></span>
+                    </button>
+                    <div id="planResult" class="mt-4 p-4 bg-slate-50 text-slate-700 rounded-md whitespace-pre-wrap hidden"></div>
                 </div>
             </div>
         </section>
@@ -286,7 +293,7 @@
         pageCountInput.addEventListener('input', calculatePrice);
 
 
-        // --- СКРИПТ ДЛЯ AI-ПОМОЩНИКА (остается без изменений) ---
+        // --- СКРИПТ ДЛЯ AI-ПОМОЩНИКА ---
         const subjectInput = document.getElementById('subjectInput');
         const generateTopicsBtn = document.getElementById('generateTopicsBtn');
         const topicsResult = document.getElementById('topicsResult');
